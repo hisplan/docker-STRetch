@@ -6,7 +6,7 @@ LABEL maintainer="Jaeyoung Chun (jaeyoung.chun@weizmann.ac.il)"
 COPY install-packages.R /tmp/install-packages.R
 
 RUN apt-get update -y \
-    && apt-get install -y software-properties-common wget git bzip2 apt-transport-https
+    && apt-get install -y software-properties-common wget git bzip2 apt-transport-https openjdk-8-jre
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 \
     && add-apt-repository 'deb [arch=amd64,i386] https://cran.rstudio.com/bin/linux/ubuntu xenial/' \
